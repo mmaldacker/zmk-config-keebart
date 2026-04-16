@@ -22,44 +22,44 @@
         default_layer {
             display-name = "QWERTY";
             // --------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BSPC |
+            // | TAB  |  Q  |  W  |  E  |  R  |  T  |  Y  |  U   |  I  |  O  |  P  | BSPC |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |  H  |  J   |  K  |  L  |  ;  |  '   |
-            // | SHFT |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  | ESC  |
+            // | DEL  |  Z  |  X  |  C  |  V  |  B  |  N  |  M   |  ,  |  .  |  /  | ESC  |
             //                    | ALT | RSE | SPC | ENT | LWR  | GUI |
             bindings = <
-               &kp TAB   &kp Q       &kp W       &kp E        &kp R        &kp T       &kp Y   &kp U        &kp I        &kp O       &kp P          &kp BSPC
-               &kp LCTRL &kp A       &kp S       &kp D        &kp F        &kp G       &kp H   &kp J        &kp K        &kp L       &kp SEMI       &kp SQT      
-               &kp LSHFT &kp Z       &kp X       &kp C        &kp V        &kp B       &kp N   &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp ESC
-                                                 &kp LALT     &lt 2 TAB    &kp SPACE   &kp RET &lt 1 RET    &kp RGUI
+               &kp TAB   &kp Q       &kp W     &kp E        &kp R        &kp T             &kp Y          &kp U        &kp I        &kp O       &kp P          &kp BSPC
+               &kp LCTRL &kp A       &kp S     &kp D        &kp F        &kp G             &kp H          &kp J        &kp K        &kp L       &kp SEMI       &kp SQT      
+               &kp DEL &kp Z       &kp X       &kp C        &kp V        &kp B             &kp N          &kp M        &kp COMMA    &kp DOT     &kp FSLH       &kp ESC
+                                               &kp LALT     &mo 2        &mt LCTRL SPACE   &mt LSHIFT RET &mo 1        &kp RGUI
             >;
         };
 
         lower_layer {
             display-name = "NUMBER";
             // -----------------------------------------------------------------------------------------
-            // |  ` |  1  |  2  |  3  |  4  |  5    |  6  |  7  |  8  |  9  |  0  | DEL |
+            // |  ` |  1  |  2  |  3  |  4  |  5    |  6  |  7  |  8  |  9  |  0  |     |
             // |    | BT1 | BT2 | BT3 | BT4 | BT5   |     | LFT | DWN |  UP | RGT |     |
             // |    | BTCR| RGB | RST | BOOT| Unlock|     |     |     |     |     |     |
-            //                  |     |     | SPC   | ENT |     |     |
+            //                  |     |     |       |     |     |     |
             bindings = <
-                &kp GRAVE  &kp N1       &kp N2          &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0    &kp DEL
+                &kp GRAVE  &kp N1       &kp N2          &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0    &trans
                 &trans     &bt BT_SEL 0 &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans   &kp LEFT &kp DOWN &kp UP    &kp RIGHT &trans
                 &trans     &bt BT_CLR   &rgb_ug RGB_TOG &sys_reset   &bootloader  &studio_unlock &trans   &trans   &trans   &trans    &trans    &trans
-                                                        &trans       &trans       &kp SPACE      &trans   &trans   &kp SPACE
+                                                        &trans       &trans       &trans         &trans   &trans   &trans
             >;
         };
 
         raise_layer {
             display-name = "SYMBOL";
             // -----------------------------------------------------------------------------------------
-            // |  ~ |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  | DEL |
+            // |  ~ |  !  |  @  |  #  |  $  |  %  |  ^  |  &  |  *  |  (  |  )  |     |
             // |    |     |     |     |     |     |     |  -  |  =  |  {  |  }  |  \  |
             // |    |     |     |     |     |     |     |  _  |  +  |  [  |  ]  | "|" |
-            //                  |     |     | SPC | ENT |     |     |
+            //                  |     |     |     |     |     |     |
             bindings = <
                &kp TILDE &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS   &kp ASTRK &kp LPAR &kp RPAR &trans
-               &trans    &trans    &trans  &trans    &trans    &trans      &trans    &kp MINUS  &kp EQUAL       &kp LBRC &kp RBRC &kp PIPE
-               &trans    &trans    &trans  &trans    &trans    &trans      &trans    &kp UNDER  &kp PLUS     &kp LBKT &kp RBKT &kp BSLH
+               &trans    &trans    &trans  &trans    &trans    &trans      &trans    &kp MINUS  &kp EQUAL &kp LBRC &kp RBRC &kp PIPE
+               &trans    &trans    &trans  &trans    &trans    &trans      &trans    &kp UNDER  &kp PLUS  &kp LBKT &kp RBKT &kp BSLH
                                            &trans    &trans    &trans      &trans    &mo 3      &trans
             >;
         };
