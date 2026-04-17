@@ -16,10 +16,11 @@
 };
 
 &mt {
-    tapping-term-ms = <200>; 
+    tapping-term-ms = <250>; 
 };
 
 / {
+
     keymap {
         compatible = "zmk,keymap";
 
